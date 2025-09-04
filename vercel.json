@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "name": "nuwais-customer-portal",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_API_URL": "https://laundry-api.bahrain-ai.com/api",
+    "VITE_APP_NAME": "Nuwais Laundry",
+    "VITE_CURRENCY": "AED"
+  }
+}
